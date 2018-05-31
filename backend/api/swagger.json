@@ -1,0 +1,67 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Map",
+    "version": "1.0"
+  },
+  "paths": {
+    "/sample_locations": {
+      "get": {
+        "description": "returns a list of World Heritage locations",
+        "responses": {
+          "200": {
+            "description": "a list of locations",
+            "examples": {
+              "application/json": [
+                {
+                  "name": "Cultural Landscape and Archaeological Remains of the Bamiyan Valley",
+                  "lng": 67.82525,
+                  "lat": 34.84694,
+                  "type": "cultural"
+                },
+                {
+                  "name": "Minaret and Archaeological Remains of Jam",
+                  "lng": 64.51605556,
+                  "lat": 34.39655556,
+                  "type": "cultural"
+                },
+                {
+                  "name": "Historic Centres of Berat and Gjirokastra ",
+                  "lng": 20.13333333,
+                  "lat": 40.06944444,
+                  "type": "cultural"
+                },
+                {
+                  "name": "Butrint",
+                  "lng": 20.02611111,
+                  "lat": 39.75111111,
+                  "type": "cultural"
+                },
+                {
+                  "name": "Al Qal'a of Beni Hammad",
+                  "lng": 4.78684,
+                  "lat": 35.81844,
+                  "type": "cultural"
+                }
+              ]
+            }
+          }
+        },
+        "operationId": "sample_locationsGET",
+        "x-swagger-router-controller": "Map"
+      }
+    },
+    "/webhook": {
+      "post": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "operationId": "webhookPOST",
+        "x-swagger-router-controller": "Map"
+      }
+    }
+  }
+}
